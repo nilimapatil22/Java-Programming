@@ -8,17 +8,38 @@ Following requirements should be taken care in the program.
 Input should be taken through Console
 Program should print the output as described in the Example Section below
 If the number is less than 1 or greater than 999 then the output should show as INVALID_INPUT
-Use While loop to solve the above problem.*/
+Use While loop to solve the above problem.
+Example
+Sample Input 1:
+10
+Expected Output 1:
+1010
+Sample Input 2:
+25
+Expected Output 2:
+11001
+Sample Input 3:
+-22
+Expected Output 3:
+INVALID_INPUT
+Sample Input 4:
+1000
+Expected Output 4:
+INVALID_INPUT
+Sample Input 5:
+457
+Expected Output 5:
+111001001*/
 
 import java.util.*;
 
 class Source {
 
-   public static int toAnyBase(int dec, int base) {
-      if (dec == 0) {
+   public static int toAnyBase(int decimal, int base) {
+      if (decimal == 0) {
          return 0;
       } else {
-         return dec % base + 10 * (toAnyBase(dec / base, base));
+         return decimal % base + 10 * (toAnyBase(decimal / base, base));
       }
    }
 
