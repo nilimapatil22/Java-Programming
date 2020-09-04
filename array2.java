@@ -32,61 +32,46 @@ Sample Input 4:
 
 Expected Output 4:
 INVALID_INPUT  */
+import java.util.*;
 
-import java.util.Scanner;
-
+class desComparator implements Comparator<Integer> {
+   @Override
+   public int compare(Integer o1, Integer o2) {
+      return o2.intValue() - o1.intValue();
+   }
+}
 
 /**
  * Main class
  */
 public class Source {
-    /**
+   /**
     * Main method
-    * @param args 
+    * 
+    * @param args
     */
-    public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        int n=sc.nextInt();
-        int temp=0;
-        int arr[]=new int[20];
-        for(int i=0;i<n;i++){
-            arr[i]=sc.nextInt();
-        }
-        if(n%2==0 && (n>1 || n<20)){
-            
-            for (int i = 0; i < n; i++) 
-        {
-            for (int j = i + 1; j < n; j++) 
-            {
-                if (arr[i] > arr[j]) 
-                {
-                    temp = arr[i];
-                    arr[i] = arr[j];
-                    arr[j] = temp;
-                }
-            }
-        }
-        }
-        if(n%2!=0 && (n>1 || n<20)){
-            for (int i = 0; i < n; i++) 
-        {
-            for (int j = i + 1; j < n; j++) 
-            {
-                if (arr[i] < arr[j]) 
-                {
-                    temp = arr[i];
-                    arr[i] = arr[j];
-                    arr[j] = temp;
-                }
-            }
-        }
-        }
-        else {
-            System.out.println("INVALID_INPUT");
-        }
-        System.out.println("EXPECTED OUTPUT:");
-        for(int i=0;i<n;i++){
-            System.out.print(arr[i]+" ");
-        }
-    }
+   public static void main(String[] args) {
+      Scanner scanner = new Scanner(System.in);
+      int number = scanner.nextInt();
+      if (number < 1 || number > 20) {
+         System.out.println("INVALID_INPUT");
+      } else {
+
+         ArrayList<Integer> arrayList = new ArrayList<Integer>();
+         for (int i = 0; i < number; i++) {
+            arrayList.add(scanner.nextInt());
+         }
+         if (number % 2 == 0) {
+            // if even, then ascending 1,2,3,4
+            Collections.sort(arrayList);
+         } else {
+            // if odd, then descending 4,3,2,1
+            Collections.sort(arrayList, new desComparator());
+
+         }
+         for (int i = 0; i < number; i++) {
+            System.out.printf("%d ", arrayList.get(i));
+         }
+      }
+   }
 }
