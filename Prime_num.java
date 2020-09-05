@@ -37,7 +37,7 @@ Sample Input 6:
 Expected Output:
 INVALID_INPUT    */
 
-import java.util.Scanner;
+	import java.util.Scanner;
 public class Source {
     public static boolean isPrime(int num) {
       for (int i = 2; i <= Math.round((float) num/2); i++) {
@@ -55,11 +55,12 @@ public class Source {
 	int sec=sc.nextInt();
 	if(first<3){
 	    System.out.println("INVALID_INPUT");
+	   
 	}
-	if(sec>1000){
+	else if(sec>1000){
 	    System.out.println("INVALID_INPUT");
 	}
-	if(first>sec){
+	else if(first>sec){
 	   System.out.println("INVALID_INPUT"); 
 	}
 	else{
