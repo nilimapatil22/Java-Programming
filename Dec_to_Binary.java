@@ -1,3 +1,4 @@
+*******************************************************************************************************************************************************
 /* DESCRIPTION
 Complete the main method of Source class with appropriate code to accept an integer in the range 1 to 999 and display the binary equivalent of that number as output.
 
@@ -30,7 +31,7 @@ Sample Input 5:
 457
 Expected Output 5:
 111001001*/
-
+*****************************************************************************************************************************************************************
 import java.util.*;
 
 class Source {
