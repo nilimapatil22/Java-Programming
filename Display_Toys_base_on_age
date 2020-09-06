@@ -6,8 +6,6 @@
 
 Insert the age through console input from the user and pass it to getToy method
 if the age is not matching display no toys available
-**************************************************************************************************************************************/
-
 
 
 
@@ -17,9 +15,7 @@ Sample Input
 
 Sample output
 Juggling Clubs
-
-
-
+**************************************************************************************************************************************/
 
 import java.util.Arrays;
 import java.util.Collections;
