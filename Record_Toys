@@ -1,0 +1,40 @@
+
+Sample Input
+
+Kite
+MusicalToy
+RubberDuckey
+Aeroplane
+
+Sample output
+Aeroplane
+Kite
+MusicalToy
+﻿RubberDuckey*/
+ 
+ //CODE********************************************************
+ 
+ import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.Scanner;
+
+public class Source{
+    public static String[] getToys(String[] arr){
+        Arrays.sort(arr);
+        return arr;
+    }
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        if(sc.hasNext()){
+            String toys[] = new String[5];
+            for(int i=0;i<5;i++){
+                toys[i] = sc.next();
+            }
+            String[] result = getToys(toys);
+            for(int i=0;i<5;i++){
+                System.out.println(result[i]);
+            }
+        }
+    }
+}
