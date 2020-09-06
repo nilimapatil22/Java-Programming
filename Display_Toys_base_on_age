@@ -1,10 +1,12 @@
 
-/********************1.      Write a program to get the input as integer and create a method getToy(int age) which uses switch case to display the toys with respect to age.
+/****************************************************************************************************************************
+1.      Write a program to get the input as integer and create a method getToy(int age) which uses switch case to display the toys with respect to age.
 
 
 
 Insert the age through console input from the user and pass it to getToy method
-if the age is not matching display no toys available*******************************/
+if the age is not matching display no toys available
+**************************************************************************************************************************************/
 
 
 
